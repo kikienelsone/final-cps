@@ -54,27 +54,41 @@ button {
   /*height: 100%;*/ }
   .container__logo-menu {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 20px 17px 16px; }
+    padding: 18px 20px 17px 16px;
+    margin-left: 10px; }
+
+.logo-menu__cps-logo {
+  position: absolute;
+  left: 88px; }
+
+.logo-menu__call {
+  margin-left: 290px; }
+
+.content {
+  position: relative; }
+  .content__button-repair {
+    position: absolute;
+    right: 78px; }
 
 .logo-menu__call,
 .logo-menu__chat,
-.logo-menu__profile,
-.content__repair-span,
-.content__check-span {
+.logo-menu__profile {
   display: none; }
 
 .logo-menu__cps-logo::after {
+  position: absolute;
   content: "";
-  height: 32px;
+  height: 34px;
   width: 2px;
   background-color: #EAEAEA;
   display: inline-block;
   margin-left: 12px;
   margin-right: 4px;
-  margin-top: 4px; }
+  margin-top: 13px; }
 
 @-webkit-keyframes animation {
   to {
@@ -277,8 +291,8 @@ button {
     margin-left: 320px; }
   .container__logo-menu {
     display: none; }
-  .content__button-repair, .content__repair-span,
-  .content__button-check, .content__check-span {
+  .content__button-repair--moving, .content__repair-span,
+  .content__button-check--moving, .content__check-span {
     display: flex; }
   .content {
     background-color: #F8F8F8;
@@ -299,7 +313,7 @@ button {
     margin-top: -20px; }
   .content__moving-buttons {
     display: flex; }
-  .content__button-check {
+  .content__button-check--moving {
     margin-left: 32px; }
   .content__check-span, .content__repair-span {
     margin-right: 8px;

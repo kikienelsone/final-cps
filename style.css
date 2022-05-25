@@ -52,6 +52,12 @@ button {
 .container {
   width: auto;
   /*height: 100%;*/ }
+  .container__logo-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px 17px 16px; }
 
 .logo-menu__call,
 .logo-menu__chat,
@@ -69,13 +75,6 @@ button {
   margin-left: 12px;
   margin-right: 4px;
   margin-top: 4px; }
-
-.container__logo-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 20px 17px 16px; }
 
 @-webkit-keyframes animation {
   to {
@@ -344,159 +343,189 @@ button {
     flex-basis: 100%; } }
 
 .wrapper {
-  display: none;
+  width: 320px;
+  height: 100%;
+  box-shadow: 7px 0 8px 0 rgba(34, 60, 80, 0.2);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 2; }
+  @media screen and (min-width: 320px) {
+    .wrapper {
+      display: none; } }
+  @media screen and (min-width: 1120px) {
+    .wrapper {
+      display: block; } }
 
-@media screen and (min-width: 1120px) {
-  .wrapper {
-    display: block;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: 0; }
-  .container__link:focus {
-    color: #7E7E82;
-    position: relative; }
-  .container__link:focus::after {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -28px;
-    width: 4px;
-    height: 32px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-color: #41F6D7; }
-  .wrapper {
-    width: 320px;
-    height: auto;
-    box-shadow: 7px 0 8px 0 rgba(34, 60, 80, 0.2); }
-  .header {
-    padding-top: 19px;
-    display: flex;
-    background: url(./static/cps-logo.svg) no-repeat 40% 60%;
-    margin-top: 18px;
-    justify-content: space-between; }
-  @-webkit-keyframes search {
-    to {
-      transform: scale(1.2); } }
-  @keyframes search {
-    to {
-      transform: scale(1.2); } }
-  @-webkit-keyframes close {
-    to {
-      transform: scale(1.1); } }
-  @keyframes close {
-    to {
-      transform: scale(1.1); } }
-  .header__search-button:hover {
-    filter: saturate(200%);
-    -webkit-animation-name: search;
-            animation-name: search;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate; }
-  .header__close-button:hover {
-    filter: saturate(200%);
-    -webkit-animation-name: close;
-            animation-name: close;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate; }
-  .header__close-button {
-    margin-left: 20px;
-    width: 40px;
-    height: 40px; }
-  .header__search-button {
-    margin-right: 24px;
-    width: 40px;
-    height: 40px; }
-  .container__list {
-    padding-left: 30px;
-    margin-top: 50px; }
-  .container__side-bar {
-    display: flex;
-    flex-direction: column; }
-  .container__list-item {
-    padding-bottom: 25px; }
-  .social {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 1px;
-    margin-right: 73px; }
-  @-webkit-keyframes call {
-    to {
-      transform: scale(1.1); } }
-  @keyframes call {
-    to {
-      transform: scale(1.1); } }
-  .social__call-button:hover {
-    filter: saturate(200%);
-    -webkit-animation-name: call;
-            animation-name: call;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate; }
-  @-webkit-keyframes chat {
-    to {
-      transform: scale(1.1); } }
-  @keyframes chat {
-    to {
-      transform: scale(1.1); } }
-  .social__chat-button:hover {
-    filter: saturate(200%);
-    -webkit-animation-name: chat;
-            animation-name: chat;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate; }
-  @-webkit-keyframes profile {
-    to {
-      transform: scale(1.1); } }
-  @keyframes profile {
-    to {
-      transform: scale(1.1); } }
-  .social__profile-button:hover {
-    filter: saturate(200%);
-    -webkit-animation-name: profile;
-            animation-name: profile;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate; }
-  .feedback {
-    display: flex;
-    flex-direction: column;
-    padding-left: 24px; }
-  .feedback__email, .feedback__tel {
-    padding-top: 16px; }
-  .feedback__tel {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0.6px; }
-  .feedback__lang {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.2px;
-    text-transform: uppercase;
-    margin-top: 25px; }
-  .lang__ru:focus, .lang__en:focus, .lang__ch:focus {
-    color: #7E7E82; } }
+.container__link:focus {
+  color: #7E7E82;
+  position: relative; }
+
+.container__link:focus::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -28px;
+  width: 4px;
+  height: 32px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #41F6D7; }
+
+.header {
+  padding-top: 19px;
+  display: flex;
+  background: url(./static/cps-logo.svg) no-repeat 40% 60%;
+  margin-top: 18px;
+  justify-content: space-between; }
+
+@-webkit-keyframes search {
+  to {
+    transform: scale(1.2); } }
+
+@keyframes search {
+  to {
+    transform: scale(1.2); } }
+
+@-webkit-keyframes close {
+  to {
+    transform: scale(1.1); } }
+
+@keyframes close {
+  to {
+    transform: scale(1.1); } }
+
+.header__search-button:hover {
+  filter: saturate(200%);
+  -webkit-animation-name: search;
+          animation-name: search;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+.header__close-button:hover {
+  filter: saturate(200%);
+  -webkit-animation-name: close;
+          animation-name: close;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+.header__close-button {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px; }
+
+.header__search-button {
+  margin-right: 24px;
+  width: 40px;
+  height: 40px; }
+
+.container__list {
+  padding-left: 30px;
+  margin-top: 50px; }
+
+.container__side-bar {
+  display: flex;
+  flex-direction: column; }
+
+.container__list-item {
+  padding-bottom: 25px; }
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 1px;
+  margin-right: 73px;
+  margin-top: 70px; }
+
+@-webkit-keyframes call {
+  to {
+    transform: scale(1.1); } }
+
+@keyframes call {
+  to {
+    transform: scale(1.1); } }
+
+.social__call-button:hover {
+  filter: saturate(200%);
+  -webkit-animation-name: call;
+          animation-name: call;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+@-webkit-keyframes chat {
+  to {
+    transform: scale(1.1); } }
+
+@keyframes chat {
+  to {
+    transform: scale(1.1); } }
+
+.social__chat-button:hover {
+  filter: saturate(200%);
+  -webkit-animation-name: chat;
+          animation-name: chat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+@-webkit-keyframes profile {
+  to {
+    transform: scale(1.1); } }
+
+@keyframes profile {
+  to {
+    transform: scale(1.1); } }
+
+.social__profile-button:hover {
+  filter: saturate(200%);
+  -webkit-animation-name: profile;
+          animation-name: profile;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px; }
+
+.feedback__email, .feedback__tel {
+  padding-top: 16px; }
+
+.feedback__tel {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.6px; }
+
+.feedback__lang {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  margin-top: 25px; }
+
+.lang__ru:focus, .lang__en:focus, .lang__ch:focus {
+  color: #7E7E82; }
 
 @charset "UTF-8";
 .brands {

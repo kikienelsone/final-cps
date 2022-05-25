@@ -1,0 +1,128 @@
+.repair-content{
+  //width: 290px;
+  background-color: #F8F8F8;
+  //position: relative;
+  padding-bottom: 20px;
+
+
+  &__slides{
+    @media screen and (min-width: 768px){
+      display: none;
+    }
+  }
+
+  &__title{
+    font-weight: 400;
+    font-size: 16px;
+    color: #7E7E82;
+    text-transform: uppercase;
+    height: 80px;
+    padding: 16px 16px 0;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background-image: linear-gradient(to right, #F2F2F2 30%, #FFFFFF);
+
+  }
+
+  &__swiper-item{
+    min-width: 225px;
+    min-height: 160px;
+    margin: 10px;
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 7px;
+  }
+
+  &__text{
+    margin-left: 16px;
+
+  }
+
+  &__icon{
+    margin-right: 10px;
+  }
+
+  &__show-button, &__hide-button{
+    display: none;
+  }
+
+  @media screen and (min-width: 768px){
+    &__show-button{
+      display: block;
+      margin-left: 20px;
+      margin-top: 20px;
+      padding-right: 20px;
+
+    }
+
+    &__hide-button{
+      margin-left: 20px;
+      margin-top: 20px;
+      padding-right: 20px;
+    }
+
+  }
+
+  &__pagination{
+    top: 275px;
+    padding-bottom: 10px;
+    position: absolute;
+    @media screen and (min-width: 768px){
+      display: none;
+    }
+  }
+
+  &__technical-list{
+    display: none;
+    @media screen and (min-width: 768px){
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      height: 190px;
+      overflow-y: hidden;
+    }
+  }
+
+  &__item{
+    min-width: 224px;
+    min-height: 160px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    position: relative;
+
+    &__item:first-child{
+      margin-left: 25px;
+    }
+
+    .repair-content__technical-circle{
+      position: absolute;
+      top: 100px;
+      right: 17px;
+
+    }
+  }
+
+  &__circle{
+    position: absolute;
+    top: 106px;
+    left:170px;
+  }
+}
+
+.showTechnicalList{
+    height: 350px;
+}
+
+.hide{
+  display: none;
+
+}
+
+.active{
+  display: block;
+}
+

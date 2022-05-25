@@ -1,0 +1,41 @@
+//@import "header";
+@import "fonts";
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+li{
+  list-style: none;
+}
+
+body {
+  font-family: "TT Lakes", sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #7E7E82;
+}
+
+h1{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+li{
+  font-weight: 500;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+
+}
+

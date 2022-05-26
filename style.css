@@ -51,7 +51,10 @@ button {
 
 .container {
   width: auto;
+  background-color: #F8F8F8;
   /*height: 100%;*/ }
+  .container__header {
+    background-color: #FFFFFF; }
   .container__logo-menu {
     display: flex;
     position: relative;
@@ -375,6 +378,8 @@ button {
   .container__link:focus {
     color: #7E7E82;
     position: relative; }
+  .container__side-bar {
+    background-color: #FFFFFF; }
   .container__link:focus::after {
     content: "";
     position: absolute;
@@ -909,7 +914,8 @@ button {
     padding-right: 20px;
     padding-left: 20px;
     font-size: 14px;
-    color: #1B1C21; }
+    color: #1B1C21;
+    margin-top: 15px; }
   .prices__items {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -975,14 +981,12 @@ button {
   position: fixed;
   z-index: 2;
   top: 0;
-  right: 0;
-  width: 320px;
   height: 732px;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  border-left: 1px solid #B8FFEC; }
   @media screen and (min-width: 768px) {
     .modal-feedback {
-      width: 455px;
-      border-left: 1px solid #B8FFEC; } }
+      right: 0; } }
   .modal-feedback__content {
     position: relative;
     margin-left: 16px; }
@@ -1025,9 +1029,6 @@ button {
     height: 48px;
     border: 1px solid #EAEAEA;
     border-radius: 10px 10px; }
-    @media screen and (min-width: 768px) {
-      .modal-feedback__name, .modal-feedback__email, .modal-feedback__phone, .modal-feedback__message {
-        width: 376px; } }
   .modal-feedback__phone {
     margin-bottom: 16px;
     margin-top: 16px; }

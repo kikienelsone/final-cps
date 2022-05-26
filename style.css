@@ -177,7 +177,7 @@ button {
 
 .content__title {
   padding-top: 24px;
-  margin-left: 16px;
+  margin-left: 30px;
   position: relative; }
 
 .content__button {
@@ -192,7 +192,7 @@ button {
   content: "";
   position: absolute;
   top: 37%;
-  left: -16px;
+  left: -30px;
   width: 4px;
   height: 40px;
   border-top-right-radius: 4px;
@@ -204,14 +204,17 @@ button {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  margin-left: 16px;
+  margin-left: 30px;
   margin-right: 16px; }
+  @media screen and (min-width: 768px) {
+    .content__text {
+      margin-left: 16px; } }
 
 .content__image {
   background-image: url(./static/content-img.png);
   min-height: 176px;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 42px;
+  margin-left: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -228,9 +231,9 @@ button {
           animation-fill-mode: forwards; }
 
 .services__list-items {
-  padding: 10px;
+  padding: 10px 6px 10px 7px;
   white-space: nowrap;
-  margin-left: 15px; }
+  margin-left: 19px; }
 
 .services__list {
   height: 40px;
@@ -263,17 +266,9 @@ button {
   .content__total {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center; }
-  .content__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-right: 50px;
-    /*margin-top: -15px;*/
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.2px; }
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px; }
   .content__text--part-two {
     margin-top: 30px;
     display: block; }
@@ -284,7 +279,8 @@ button {
   .content__cps-logo {
     border-radius: 7px; }
   .content__button-text {
-    margin: 10px; } }
+    margin-top: 10px;
+    margin-left: -9px; } }
 
 @media screen and (min-width: 1120px) {
   body {
@@ -305,14 +301,16 @@ button {
     align-items: center;
     margin-right: 3%;
     height: 150px; }
-  .content__title--name, .content__moving-buttons {
-    margin-top: -20px; }
+  .content__title-name, .content__moving-buttons {
+    margin-top: -20px;
+    padding-left: 20px; }
   .content__services {
     overflow-x: hidden;
     height: 110px;
     margin-top: -20px; }
   .content__moving-buttons {
-    display: flex; }
+    display: flex;
+    margin-right: 23px; }
   .content__button-check--moving {
     margin-left: 32px; }
   .content__check-span, .content__repair-span {
@@ -322,6 +320,7 @@ button {
     display: flex;
     flex-wrap: nowrap;
     margin-right: -54px;
+    padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 5px;
     overflow-x: scroll;
@@ -333,8 +332,6 @@ button {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-    .services__list-items:last-child .content__text {
-      margin-top: 16px; }
     .services__list-items:last-child .content__image {
       display: flex;
       width: 180%;
@@ -352,12 +349,13 @@ button {
     flex-wrap: wrap;
     flex-basis: 20%;
     overflow: hidden;
-    margin: 0; }
+    margin: 0;
+    padding-left: 20px; }
   .services__list-link:last-child {
     flex-basis: 100%; } }
 
 .wrapper {
-  width: 320px;
+  width: 300px;
   height: 100%;
   box-shadow: 7px 0 8px 0 rgba(34, 60, 80, 0.2);
   display: block;
@@ -372,20 +370,21 @@ button {
     .wrapper {
       display: block; } }
 
-.container__link:focus {
-  color: #7E7E82;
-  position: relative; }
-
-.container__link:focus::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -28px;
-  width: 4px;
-  height: 32px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: #41F6D7; }
+.container {
+  margin-left: -19px; }
+  .container__link:focus {
+    color: #7E7E82;
+    position: relative; }
+  .container__link:focus::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -28px;
+    width: 4px;
+    height: 32px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #41F6D7; }
 
 .header {
   padding-top: 19px;
@@ -436,6 +435,9 @@ button {
   margin-left: 20px;
   width: 40px;
   height: 40px; }
+  @media screen and (min-width: 1120px) {
+    .header__close-button {
+      visibility: hidden; } }
 
 .header__search-button {
   margin-right: 24px;
@@ -553,7 +555,7 @@ button {
   color: #7E7E82;
   font-weight: 400;
   font-size: 16px;
-  padding: 16px 16px 0;
+  padding: 16px 30px 0;
   line-height: 24px;
   letter-spacing: -0.2px;
   text-transform: uppercase;
@@ -570,6 +572,10 @@ button {
   /*overflow: scroll;*/
   padding-top: 16px;
   padding-bottom: 35px; }
+
+@media screen and (min-width: 1120px) {
+  .brands__name-list {
+    margin-left: 16px; } }
 
 .brands__slider-item {
   position: relative;
@@ -595,7 +601,7 @@ button {
   right: 30px; }
 
 .swiper-slide:first-child {
-  margin-left: 16px; }
+  margin-left: 30px; }
 
 .img-logo-lenovo {
   margin: 20px 16px 0; }
@@ -651,7 +657,7 @@ button {
     display: none; }
   .brands__title {
     height: 56px;
-    padding-left: 24px; }
+    padding-left: 42px; }
   .brands__name-list {
     display: flex;
     flex-direction: row;
@@ -659,7 +665,13 @@ button {
     flex-wrap: wrap;
     /*width: 200px;*/
     /*overflow: hidden;*/
-    /*height: 200px;*/ }
+    /*height: 200px;*/
+    margin-left: 6px; } }
+  @media screen and (min-width: 768px) and (min-width: 1120px) {
+    .brands__name-list {
+      margin-left: 16px; } }
+
+@media screen and (min-width: 768px) {
   .brands__item:hover {
     outline: 2px solid #FF3E79; }
   .brands__item {
@@ -677,7 +689,13 @@ button {
   .brands_show-button {
     display: block;
     color: #1B1C21;
-    font-family: "TT Lakes", sans-serif; }
+    font-family: "TT Lakes", sans-serif;
+    padding-left: 8px; } }
+  @media screen and (min-width: 768px) and (min-width: 1120px) {
+    .brands_show-button {
+      padding-left: 16px; } }
+
+@media screen and (min-width: 768px) {
   .brands_show-button::before {
     content: url(./static/icon.svg);
     margin-left: 24px;
@@ -689,7 +707,11 @@ button {
   .brands_hide-button {
     display: none;
     color: #1B1C21;
-    font-family: "TT Lakes", sans-serif; } }
+    font-family: "TT Lakes", sans-serif;
+    padding-left: 8px; } }
+  @media screen and (min-width: 768px) and (min-width: 1120px) {
+    .brands_hide-button {
+      padding-left: 16px; } }
 
 @media screen and (min-width: 1120px) {
   .brands__main-container {
@@ -746,10 +768,13 @@ button {
     color: #7E7E82;
     text-transform: uppercase;
     height: 80px;
-    padding: 16px 16px 0;
+    padding: 16px 37px 0;
     line-height: 24px;
     letter-spacing: -0.2px;
     background-image: linear-gradient(to right, #F2F2F2 30%, #FFFFFF); }
+    @media screen and (width: 1120px) {
+      .repair-content__title {
+        padding-left: 42px; } }
   .repair-content__swiper-item {
     min-width: 225px;
     min-height: 160px;
@@ -766,13 +791,20 @@ button {
   @media screen and (min-width: 768px) {
     .repair-content__show-button {
       display: block;
-      margin-left: 20px;
-      margin-top: 20px;
-      padding-right: 20px; }
-    .repair-content__hide-button {
-      margin-left: 20px;
+      margin-left: 34px;
       margin-top: 20px;
       padding-right: 20px; } }
+  @media screen and (min-width: 768px) and (min-width: 1120px) {
+    .repair-content__show-button {
+      margin-left: 40px; } }
+  @media screen and (min-width: 768px) {
+    .repair-content__hide-button {
+      margin-left: 34px;
+      margin-top: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 768px) and (min-width: 1120px) {
+    .repair-content__hide-button {
+      margin-left: 40px; } }
   .repair-content__pagination {
     top: 275px;
     padding-bottom: 10px;
@@ -789,7 +821,11 @@ button {
         justify-content: flex-start;
         flex-wrap: wrap;
         height: 190px;
-        overflow-y: hidden; } }
+        overflow-y: hidden;
+        padding-left: 16px; } }
+    @media screen and (min-width: 1120px) {
+      .repair-content__technical-list {
+        padding-left: 23px; } }
   .repair-content__item {
     min-width: 224px;
     min-height: 160px;
@@ -830,10 +866,13 @@ button {
     color: #7E7E82;
     text-transform: uppercase;
     height: 56px;
-    padding: 16px 16px 0;
+    padding: 16px 30px 0;
     line-height: 24px;
     letter-spacing: -0.2px;
     background-image: linear-gradient(to right, #F8F8F8 30%, #FFFFFF); }
+    @media screen and (min-width: 1120px) {
+      .prices__title {
+        padding-left: 40px; } }
   .prices__slide {
     min-height: 150px;
     background-color: #FFFFFF;
@@ -889,7 +928,7 @@ button {
     line-height: 20px;
     letter-spacing: 0.2px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 32px;
     width: 40%; }
   .prices__link {
     position: relative;
@@ -918,9 +957,10 @@ button {
     .footer {
       flex-direction: row;
       justify-content: space-between;
-      width: 100%;
-      margin: -10px;
-      margin-top: 50px; }
+      width: 86%;
+      /* margin: -10px; */
+      margin-top: 50px;
+      margin-left: 40px; }
       .footer__first {
         width: 40%; }
       .footer__third {

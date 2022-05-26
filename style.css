@@ -358,7 +358,6 @@ button {
     flex-basis: 100%; } }
 
 .wrapper {
-  width: 300px;
   height: 100%;
   box-shadow: 7px 0 8px 0 rgba(34, 60, 80, 0.2);
   display: block;
@@ -370,12 +369,6 @@ button {
     .wrapper {
       display: none;
       width: 100%; } }
-  @media screen and (min-width: 500px) {
-    .wrapper {
-      width: 60%; } }
-  @media screen and (min-width: 700px) {
-    .wrapper {
-      width: 60%; } }
   @media screen and (min-width: 1120px) {
     .wrapper {
       display: block;
@@ -404,7 +397,8 @@ button {
   display: flex;
   background: url(./static/cps-logo.svg) no-repeat 40% 60%;
   margin-top: 18px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 44vh; }
 
 @-webkit-keyframes search {
   to {
@@ -473,7 +467,8 @@ button {
   justify-content: space-around;
   margin-left: 1px;
   margin-right: 115px;
-  margin-top: 70px; }
+  margin-top: 70px;
+  width: 26vh; }
 
 @-webkit-keyframes call {
   to {

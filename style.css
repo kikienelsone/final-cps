@@ -368,10 +368,18 @@ button {
   z-index: 2; }
   @media screen and (min-width: 320px) {
     .wrapper {
-      display: none; } }
+      display: none;
+      width: 100%; } }
+  @media screen and (min-width: 500px) {
+    .wrapper {
+      width: 60%; } }
+  @media screen and (min-width: 700px) {
+    .wrapper {
+      width: 60%; } }
   @media screen and (min-width: 1120px) {
     .wrapper {
-      display: block; } }
+      display: block;
+      width: 300px; } }
 
 .container {
   margin-left: -19px; }
@@ -464,7 +472,7 @@ button {
   display: flex;
   justify-content: space-around;
   margin-left: 1px;
-  margin-right: 73px;
+  margin-right: 115px;
   margin-top: 70px; }
 
 @-webkit-keyframes call {
@@ -986,7 +994,8 @@ button {
   border-left: 1px solid #B8FFEC; }
   @media screen and (min-width: 768px) {
     .modal-feedback {
-      right: 0; } }
+      right: 0;
+      margin-right: 50px; } }
   .modal-feedback__content {
     position: relative;
     margin-left: 16px; }
@@ -1055,13 +1064,13 @@ button {
   position: fixed;
   z-index: 2;
   top: 0;
-  right: 0;
   width: 320px;
   height: 676px;
   background-color: #FFFFFF; }
   @media screen and (min-width: 768px) {
     .modal-call {
-      width: 455px;
+      right: 0;
+      margin-right: 129px;
       border-left: 1px solid #B8FFEC; } }
   .modal-call__close-button {
     margin-top: 24px;
